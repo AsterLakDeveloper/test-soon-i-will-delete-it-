@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexcent</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter";
+            background-color: white;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1002px;
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+
+        header {
+            background-color: white;
+        }
+
+        .header_inner {
+            height: 59px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .img_header {
+            width: 107px;
+            height: 17px;
+        }
+
+        .div_logo {
+            margin-left: 100px;
+        }
+
+        .header_actions {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            margin-right: 100px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            gap: 17px;
+        }
+
+        a {
+            font-family: "Inter";
+            text-decoration: none;
+        }
+
+        li a {
+            color: black;
+        }
+
+        .register_link {
+            color: white;
+            background-color: #4caf4f;
+            padding: 10px 22px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        /* SECTION 1 */
+
+        .section_1 {
+            background-color: #f5f7fa;
+            height: 417px;
+        }
+
+        .section_1_inner {
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .h1_section1 {
+            padding-top: 117px;
+            font-size: 45px;
+            color: #4d4d4d;
+            margin-left: 100px;
+        }
+
+        .p_section1 {
+            margin-left: 100px;
+            color: #717171;
+            margin-top: 11px;
+        }
+
+        .img_section1 {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .img1 {
+            height: 272px;
+            width: 283px;
+            margin-right: 100px;
+        }
+
+        .register_button_section1 {
+            margin-top: 22px;
+            margin-left: 100px;
+            margin-bottom: 112px;
+        }
+
+        /* SLIDER DOTS */
+
+        .div_radius {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 6px;
+        }
+
+        .radius {
+            width: 7px;
+            height: 7px;
+            background-color: #4caf4f;
+            opacity: 30%;
+            border-radius: 50%;
+        }
+
+        .radius.active {
+            opacity: 100%;
+        }
+
+        /* SECTION 2 */
+
+        .section_2 {
+            background-color: white;
+            height: 133px;
+        }
+
+        .h1_section2 {
+            color: #4d4d4d;
+            padding-top: 20px;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .p_section2 {
+            color: #717171;
+            display: flex;
+            justify-content: center;
+        }
+
+        .img_section2 {
+            display: flex;
+            padding-top: 15px;
+            justify-content: space-around;
+            margin-left: 100px;
+            margin-right: 100px;
+            gap: 95px;
+        }
+
+        .section_3 {
+            background-color: white;
+            height: 291px;
+        }
+
+        .h1_section3 {
+            margin-top: 28px;
+            font-size: 25px;
+            color: #4d4d4d;
+            padding-top: 29px;
+            position: relative;
+        }
+
+        .content_section3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .div_boxes {
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% - 200px);
+            margin: 20px auto 0;
+            margin-top: 11px;
+        }
+
+        .box_1 {
+            width: 200px;
+            padding: 22px 17px;
+            box-shadow: 1px 1px 1px 0.1px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box_1 h2 {
+            text-align: center;
+            font-size: 20px;
+            color: #4d4d4d;
+        }
+
+        .box_1 p {
+            text-align: center;
+            font-size: 10px;
+            margin-top: 6px;
+            color: #717171;
+        }
+
+        .section_4 {
+            margin-top: 50px;
+            background-color: #ffffff;
+            height: 301px;
+        }
+
+        .pic_1 {
+            margin-left: 100px;
+        }
+
+        .content_section4 {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            margin-left: 34px;
+            width: 350px;
+            align-items: flex-start;
+            margin-right: 142px;
+        }
+
+        .h1_section4 {
+            font-size: 25px;
+        }
+
+        .p_section4 {
+            margin-top: 11px;
+            font-size: 10px;
+        }
+
+        .container4_inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .register_button_section4 {
+            margin-top: 22px;
+            margin-bottom: 112px;
+        }
+
+        .section_5 {
+            height: 203px;
+            background-color: #f5f7fa;
+        }
+
+        .h1_section5 {
+            font-size: 25px;
+        }
+
+        .container5_inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .content_section5 {
+            margin-left: 100px;
+            padding-top: 59px;
+        }
+
+        .content_icons {
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+            margin-top: 40px;
+            margin-right: 100px;
+            gap: 30px;
+        }
+
+        .box_icon {
+            display: flex;
+            align-items: center;
+            width: calc(50% - 15px);
+            gap: 10px;
+        }
+
+        .box_pre_1 {
+            margin-left: 10px;
+        }
+
+        .box_icon_2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box_pre_2 {
+            margin-left: 10px;
+        }
+
+        .h1_section5 {
+            color: #4d4d4d;
+        }
+
+        .h1_section5 span {
+            white-space: nowrap;
+        }
+
+        .content_section6 {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            margin-left: 34px;
+            width: 350px;
+            align-items: flex-start;
+            margin-right: 142px;
+        }
+
+        .h1_section6 {
+            font-size: 25px;
+        }
+
+        .p_section6 {
+            margin-top: 11px;
+            font-size: 10px;
+        }
+
+        .container6_inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .box_img {
+            margin-top: 33px;
+            padding-bottom: 33px;
+            margin-left: 100px;
+        }
+
+        .section_7 {
+            height: 271px;
+            background-color: #f5f7fa;
+        }
+
+        .Illustration_4 {
+            margin-top: 22px;
+            margin-left: 100px;
+        }
+
+        .section_7_inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content_section7 {
+            margin-left: 54px;
+            margin-right: 100px;
+        }
+
+        .p_section7 {
+            margin-top: 23px;
+            width: 521px;
+            height: 117px;
+            font-weight: 500;
+        }
+
+        .row_icons {
+            margin-top: 22px;
+            position: relative;
+            top: -10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .icons {
+            display: flex;
+            gap: 29px;
+        }
+
+        .link {
+            display: inline-flex;
+            align-items: center;
+            color: #4caf4f;
+            margin-left: 28px;
+        }
+
+        .section_8 {
+            height: 355px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        .h1_section8 {
+            display: flex;
+            justify-content: center;
+            margin-top: 33px;
+            color: #4d4d4d;
+        }
+
+        .p_section8 {
+            display: flex;
+            justify-content: center;
+            margin-left: 282px;
+            margin-right: 282px;
+            width: 437px;
+            text-align: center;
+            font-size: 11px;
+            color: #717171;
+        }
+
+        .bc_1 {
+            width: 221px;
+            height: 124px;
+            background-color: #f5f7fa;
+            position: relative;
+            top: -70px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .p_bc_1 {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 11px;
+        }
+
+        .img_section9 {
+            display: flex;
+            justify-content: space-between;
+            margin: -220px auto 0;
+            gap: 17px;
+            width: calc(100% - 200px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cards {
+            width: calc(100% - 200px);
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-around;
+        }
+
+        .section9 {
+            height: 355px;
+            background-color: white;
+        }
+
+        .section10 {
+            height: 209px;
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+        }
+
+        .p_section10 {
+            margin: 22px;
+            font-size: 45px;
+            text-align: center;
+            font-weight: 700;
+            color: #263238;
+        }
+
+        .register_link_1 {
+            color: white;
+            background-color: #4caf4f;
+            padding: 10px 22px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        .register_button_section8 {
+            display: flex;
+            justify-content: center;
+            margin-left: 100px;
+        }
+
+        footer {
+            height: 229px;
+            background-color: #263238;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .copyright {
+            padding-top: 45px;
+            margin-left: 115px;
+            white-space: nowrap;
+        }
+
+        .copyright_text {
+            margin-top: 28px;
+            margin-bottom: 28px;
+            font-size: 10px;
+            color: white;
+        }
+
+        .social {
+            display: flex;
+            gap: 11px;
+        }
+
+        .content_footer {
+            margin-top: 45px;
+            margin-right: 115px;
+            display: flex;
+            justify-content: space-between;
+            gap: 80px;
+        }
+
+        .first_content {
+            color: white;
+            margin-left: 87px;
+        }
+
+        .first_content_p {
+            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 10px;
+        }
+
+        .second_content {
+            color: white;
+        }
+
+        .third_content {
+            color: white;
+        }
+
+        .email {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 11px;
+            margin-top: 17px;
+            background-color: grey;
+            padding: 5px;
+            white-space: nowrap;
+            border-radius: 6px;
+        }
+
+        .a_content_footer:visited {
+            color: white
+        }
+
+        .a_content_footer {
+            color: white
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header_inner">
+            <div class="div_logo">
+                <a href="index.html">
+                    <img class="img_header" src="pic/svg/Logotype.svg" alt="Nexcent">
+                </a>
+            </div>
+            <div class="header_actions">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#community">Community</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </nav>
+                <div class="register_button">
+                    <a class="register_link" href="#">Register Now →</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section_1">
+            <div class="container section_1_inner">
+                <div class="content_section1">
+                    <h1 class="h1_section1">
+                        Lessons and insights<br>
+                        <span style="color: #4CAF4F">from 8 years</span>
+                    </h1>
+                    <p class="p_section1">
+                        Where to grow your business as a photographer: site or social media?
+                    </p>
+                    <div class="register_button_section1">
+                        <a href="#" class="register_link">Register</a>
+                    </div>
+                </div>
+                <div class="img_section1">
+                    <img class="img1" src="pic/png/Illustration.png" alt="Illustration">
+                </div>
+                <div class="div_radius">
+                    <div class="radius active"></div>
+                    <div class="radius"></div>
+                    <div class="radius"></div>
+                </div>
+            </div>
+        </section>
+        <section class="section_2">
+            <div class="container">
+                <div class="content_section2">
+                    <h1 class="h1_section2">Our Clients</h1>
+                    <p class="p_section2">
+                        We have been working with some Fortune 500+ clients
+                    </p>
+                </div>
+                <div class="img_section2">
+                    <img src="pic/svg/Logo.svg" alt="Client logo">
+                    <img src="pic/svg/Logo-1.svg" alt="Client logo">
+                    <img src="pic/svg/Logo-2.svg" alt="Client logo">
+                    <img src="pic/svg/Logo-3.svg" alt="Client logo">
+                    <img src="pic/svg/Logo-4.svg" alt="Client logo">
+                    <img src="pic/svg/Logo-5.svg" alt="Client logo">
+                    <img src="pic/svg/Logo-6.svg" alt="Client logo">
+                </div>
+            </div>
+        </section>
+        <section class="section_3">
+            <div class="container">
+                <div class="content_section3">
+                    <h1 class="h1_section3">Manage your entire community<br><span
+                            style="display: flex; justify-content: center;">in a single system</span></h1>
+                    <p class="p_section3"
+                        style="color: #717171; font-family: 'Inter'; font-size: 11px; margin-top: 6px;">Who is Nextcent
+                        suitable for?</p>
+                    <div class="div_boxes">
+                        <div class="box_1">
+                            <div class="content_section3">
+                                <img src="pic/png/Icon.png">
+                                <h2>Membership<br>Organisations</h2>
+                                <p class="p_box1_section3">Our membership management<br>software provides full
+                                    automation<br>of membership renewals and payments</p>
+                            </div>
+                        </div>
+                        <div class="box_1">
+                            <img src="pic/png/Icon-1.png">
+                            <h2>Membership<br>Organisations</h2>
+                            <p class="p_box1_section3">Our membership management<br>software provides full
+                                automation<br>of membership renewals<br>and payments</p>
+                        </div>
+                        <div class="box_1">
+                            <img src="pic/png/Icon-2.png">
+                            <h2>Membership<br>Organisations</h2>
+                            <p class="p_box1_section3">Our membership management<br>software provides full
+                                automation<br>of membership renewals and payments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_4">
+            <div class="container container4_inner">
+                <div class="pic_1">
+                    <img src="pic/png/Illustration_1.png">
+                </div>
+                <div class="content_section4">
+                    <h1 class="h1_section4" style="color:#4D4D4D;">The unseen of spending three years at Pixelgrade</h1>
+                    <p class="p_section4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
+                        justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum
+                        lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium
+                        auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar
+                        odio.</p>
+                    <div class="register_button_section4" style="margin-right: 100px;">
+                        <a href="#" class="register_link " style="font-size: 11px;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_5">
+            <div class="container container5_inner">
+                <div class="content_section5">
+                    <h1 class="h1_section5">Helping a local<br> <span style="color: #4CAF4F;">business reinvent
+                            itself</span></h1>
+                </div>
+                <div class="content_icons" style="margin-left: 142px;">
+                    <div class="box_icon">
+                        <img class="icon_box_1" src="pic/svg/Icon.svg">
+                        <div class="box_pre_1">
+                            <h2 style="color: #4D4D4D; font-size: 20px;">2,245,341</h2>
+                            <p style="color: #717171; font-size: 11px;">Members</p>
+                        </div>
+                    </div>
+                    <div class="box_icon">
+                        <img class="icon_box_1" src="pic/svg/Icon_1.svg">
+                        <div class="box_pre_1">
+                            <h2 style="color: #4D4D4D; font-size: 20px;">46,328</h2>
+                            <p #717171; font-size: 11px;>Clubs</p>
+                        </div>
+                    </div>
+                    <div class="box_icon">
+                        <img class="icon_box_1" src="pic/svg/Icon-1.svg">
+                        <div class="box_pre_1">
+                            <h2 style="color: #4D4D4D; font-size: 20px;">828,867</h2>
+                            <p style="color: #717171; font-size: 11px;">Event Bookings</p>
+                        </div>
+                    </div>
+                    <div class="box_icon">
+                        <img class="icon_box_1" src="pic/svg/Icon-2.svg">
+                        <div class="box_pre_1">
+                            <h2 style="color: #4D4D4D; font-size: 20px;">1,926,436</h2>
+                            <p style="color: #717171; font-size: 11px;">Payments</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="section_6">
+            <div class="container container6_inner">
+                <div class="box_img">
+                    <img class="img_section6" src="pic/png/Illustration_2.png">
+                </div>
+                <div class="content_section6">
+                    <h1 class="h1_section6" style="color:#4D4D4D;">The unseen of spending three years at Pixelgrade</h1>
+                    <p class="p_section6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
+                        justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum
+                        lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium
+                        auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar
+                        odio.</p>
+                    <div class="register_button_section4" style="margin-right: 100px;">
+                        <a href="#" class="register_link " style="font-size: 11px;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_7">
+            <div class="container section_7_inner">
+                <div class="pic_2">
+                    <img class="Illustration_4" src="pic/png/Illustration_3.png">
+                </div>
+                <div class="content_section7">
+                    <p class="p_section7" style="color: #717171; font-size: 11px;">Maecenas dignissim justo
+                        eget nulla
+                        rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus
+                        tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in,
+                        gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie,
+                        nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla
+                        sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque
+                        malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget
+                        efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+                    </p>
+                    <div class="box_section7">
+                        <h2 style="font-size: 14px; color: #4CAF4F; margin-top: 11px;">Tim Smith</h2>
+                        <p style="font-size: 11px; color: #89939E">British Dragon Boat Racing Association</p>
+                    </div>
+                    <div class="row_icons">
+                        <div class="icons">
+                            <img src="pic/svg/Logo-7.svg">
+                            <img src="pic/svg/Logo-1.svg">
+                            <img src="pic/svg/Logo-2.svg">
+                            <img src="pic/svg/Logo-3.svg">
+                            <img src="pic/svg/Logo-4.svg">
+                            <img src="pic/svg/Logo-5.svg">
+                        </div>
+                        <div class="link" style="font-size: 14px; white-space: nowrap;">
+                            <p>Meet all customers →</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_8">
+            <div class="container container8_inner">
+                <div class="content_section8">
+                    <h1 class="h1_section8">Caring is the new marketing</h1>
+                    <p class="p_section8">The Nextcent blog is the best place to read about the latest membership
+                        insights, trends and
+                        more. See who's joining the community, read about how our community are increasing their
+                        membership income and lot's more.​</p>
+                </div>
+            </div>
+        </section>
+        <section class="section9">
+            <div class="container">
+                <div class="img_section9">
+                    <img src="pic/png/image 18.png">
+                    <img src="pic/png/image 19.png">
+                    <img src="pic/png/image 20.png">
+                </div>
+                <div class="cards">
+                    <div class="bc_1">
+                        <p class="p_bc_1" style="color: #717171;">Creating Streamlined Safeguarding Processes with
+                            OneRen
+                        </p>
+                        <p class="p_bc_1" style="color: #4CAF4F">Readmore →</p>
+                    </div>
+                    <div class="bc_1">
+                        <p class="p_bc_1" style="color: #717171;">What are your safeguarding responsibilities and how
+                            can
+                            you manage them?</p>
+                        <p class="p_bc_1" style="color: #4CAF4F">Readmore →</p>
+                    </div>
+                    <div class="bc_1">
+                        <p class="p_bc_1" style="color: #717171;">Revamping the Membership Model with Triathlon
+                            Australia
+                        </p>
+                        <p class="p_bc_1" style="color: #4CAF4F">Readmore →</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section10">
+            <div>
+                <p class="p_section10">Pellentesque suscipit<br> fringilla libero eu.</p>
+                <div class="register_button_section8" style="margin-right: 100px;">
+                    <a href="#" class="register_link_1" style="font-size: 11px;">Get a Demo →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <img src="pic/svg/Logotype_footer.svg">
+                <div class="copyright_text">
+                    <p>Copyright © 2020 Landify UI Kit.</p>
+                    <p style="margin-top: 6px;">All rights reserved</p>
+                </div>
+                <div class="social">
+                    <a href="#instagram"><img src="pic/svg/Footer/Big/Social Icons.svg"></a>
+                    <a href="#social_media"><img src="pic/svg/Footer/Big/Social Icons-1.svg"></a>
+                    <a href="#x"><img src="pic/svg/Footer/Big/Social Icons-2.svg"></a>
+                    <a href="#youtube"><img src="pic/svg/Footer/Big/Social Icons-3.svg"></a>
+                </div>
+            </div>
+            <div class="content_footer">
+                <div class="first_content">
+                    <h2 style="margin-bottom: 17px;">Company</h2>
+                    <div class="first_content_p">
+                        <a href="#About_us" class="a_content_footer">About us</a>
+                        <a href="#Blog" class="a_content_footer">Blog</a>
+                        <a href="#Contact_us" class="a_content_footer">Contact us</a>
+                        <a href="#Pricing" class="a_content_footer">Pricing</a>
+                        <a href="#Testimonials" class="a_content_footer">Testimonials</a>
+                    </div>
+                </div>
+                <div class="second_content">
+                    <h2 style="margin-bottom: 17px;">Support</h2>
+                    <div class="first_content_p">
+                        <a href="#Help_center" class="a_content_footer">Help center</a>
+                        <a href="#Terms_of_service" class="a_content_footer">Terms of service</a>
+                        <a href="#Legal" class="a_content_footer">Legal</a>
+                        <a href="#Privacy_policy" class="a_content_footer">Privacy policy</a>
+                        <a href="#Status" class="a_content_footer">Status</a>
+                    </div>
+                </div>
+                <div class="third_content">
+                    <h2 style="white-space: nowrap;">Stay up to date</h2>
+                    <div class="email">
+                        <p style="color: #D9DBE1">Your email address</p>
+                        <img src="pic/svg/send.svg" style="margin-left: 58px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
